@@ -1,0 +1,10 @@
+<h1><%= @post[:title] %></h1>
+<p><%= @post[:body] %></p>
+<br>
+&nbsp <button type="submit" name="button"><a href="/<%= @post[:id] %>/edit">Edit</a></button>
+<br>
+<form action="/<%= @post[:id] %>" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <br>
+  <input type="submit" name="" value="Delete">
+</form>

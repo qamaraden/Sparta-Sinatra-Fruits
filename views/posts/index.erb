@@ -1,0 +1,12 @@
+<h1>Fruits</h1>
+<% @posts.each do |fruit| %>
+<div>
+  <h3>
+    <a href="/<%= fruit[:id] %>"><%= fruit[:title] %></a>
+
+    <p><%= fruit[:body] %></p>
+
+  </h3>
+</div>
+
+<% end %>

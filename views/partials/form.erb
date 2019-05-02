@@ -1,0 +1,19 @@
+<form action="/<%= @post[:id] %>" method="post">
+  <div>
+    <label>Fruit Name: </label> &nbsp&nbsp&nbsp&nbsp
+    <input type="text" name="title" placeholder="Enter a title" value="<%= @post[:title] %>">
+  </div>
+  <br>
+  <div>
+    <label>Description of fruit: </label>
+    <br><br>
+    <textarea name="body" rows="5" cols="80" placeholder="Put your new fruit"><%= @post[:body] %></textarea>
+  </div>
+  <br>
+  <div>
+    <input type="submit" value="Save Fruit">
+  </div>
+  <% if(@post[:id] != "") %>
+  <input type="hidden" name="_method" value="put">
+  <% end %>
+</form>
