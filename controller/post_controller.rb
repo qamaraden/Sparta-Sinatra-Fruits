@@ -38,7 +38,7 @@ get "/"  do
 end
 
 get "/new" do
-
+    @title = "New"
     @post = {
       id: "",
       title: "",
@@ -71,6 +71,7 @@ post "/" do
 
   get "/:id/edit" do
     id = params[:id].to_i
+    @title = "Edit"
     @post = $fruits[id]
     @title = "Edit"
 
